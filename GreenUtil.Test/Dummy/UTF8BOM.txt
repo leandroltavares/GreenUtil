@@ -1,0 +1,1 @@
+﻿TESTE UTF8 com BOM

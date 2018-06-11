@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <DebugType>Full</DebugType>
+	<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+	<Description>Pacote feito de programador para programador com as principais funções utilitárias utilizadas nos projetos da Green</Description>
+	<Copyright>Green Concept  © 2018</Copyright>
+	<AssemblyVersion>1.0.31.0</AssemblyVersion>
+	<FileVersion>1.0.31.0</FileVersion>
+	<Version>1.0.31</Version>
+	<Company>Green Concept</Company>
+	<Authors>Leandro Luciani Tavares, Wellington Gama Gomes, Fernando Garcia Bellio, Marcos Denoni Buturri, Maurilio Nava Junior, Gustavo Motta Tranche</Authors>
+	<PackageReleaseNotes>ToSingleSpace method added</PackageReleaseNotes>
+	<PackageIconUrl>https://www.dropbox.com/s/27reftvfvbxjjv0/greenutil.ico?dl=1</PackageIconUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net471|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net471|AnyCPU'">
+    <DocumentationFile>bin\Release\net471\GreenUtil.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.10" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.Caching" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Assets\Messages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Assets\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

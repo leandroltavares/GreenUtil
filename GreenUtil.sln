@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenUtil", "GreenUtil\GreenUtil.csproj", "{CFF36525-0BBA-4D8B-8F56-4B6989030E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenUtil.Test", "GreenUtil.Test\GreenUtil.Test.csproj", "{6EDD6FF4-C65D-4527-8561-3AB6AB538669}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFF36525-0BBA-4D8B-8F56-4B6989030E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF36525-0BBA-4D8B-8F56-4B6989030E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF36525-0BBA-4D8B-8F56-4B6989030E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF36525-0BBA-4D8B-8F56-4B6989030E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EDD6FF4-C65D-4527-8561-3AB6AB538669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EDD6FF4-C65D-4527-8561-3AB6AB538669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EDD6FF4-C65D-4527-8561-3AB6AB538669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EDD6FF4-C65D-4527-8561-3AB6AB538669}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CBDDA10-51A9-4CF2-99AA-EBBC612E1DC0}
+	EndGlobalSection
+EndGlobal
