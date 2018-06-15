@@ -4,7 +4,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <DebugType>Full</DebugType>
 	<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-	<Description>Pacote feito de programador para programador com as principais funções utilitárias utilizadas nos projetos da Green</Description>
+	<Description>Library made from coders to coders with some utilities used in GreenConcept projects</Description>
 	<Copyright>Green Concept © 2018</Copyright>
 	<AssemblyVersion>1.0.31.0</AssemblyVersion>
 	<FileVersion>1.0.31.0</FileVersion>
@@ -12,7 +12,7 @@
 	<Company>Green Concept</Company>
 	<Authors>Leandro Luciani Tavares, Wellington Gama Gomes, Fernando Garcia Bellio, Marcos Denoni Buturri, Maurilio Nava Junior, Gustavo Motta Tranche</Authors>
 	<PackageReleaseNotes>ToSingleSpace method added</PackageReleaseNotes>
-	<PackageIconUrl>https://www.dropbox.com/s/27reftvfvbxjjv0/greenutil.ico?dl=1</PackageIconUrl>
+	<PackageIconUrl>https://raw.githubusercontent.com/leandroltavares/GreenUtil/master/icon.png</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net471|AnyCPU'">
     <DocumentationFile></DocumentationFile>
