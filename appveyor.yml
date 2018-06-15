@@ -10,6 +10,17 @@ before_build:
   - cmd: dotnet --version
 # Display minimal restore text
   - cmd: dotnet restore ./GreenUtil.sln --verbosity m
+  - choco install opencover.portable
+  - choco install codecov
+test_script:
+  - OpenCover.Console.exe -register:user -target:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\mstest.exe" -targetargs:"/testcontainer:GreenUtil.dll" -output:".\coverage.xml" -filter:"+[GreenUtil*]* -[GreenUtil.Test*]*"
+  test_script:
+ - OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:".\uGraph\bin\Release\netstandard2.0\uGraph.Test.dll -noshadow" -output:"coverage.xml" -filter:"+[uGraph*]* -[uGraph.Test*]*"
+after_test:
+   - ps: |
+      $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
+      Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
+      bash codecov.sh -f "coverage.xml" -t 5fca849b-5826-42b1-bcef-3b752abee426
 artifacts:
   - path: '.\GreenUtil\bin\Release\netstandard2.0\GreenUtil.dll'
     name: GreenUtil.dll
