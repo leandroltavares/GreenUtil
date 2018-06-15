@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <DebugType>Full</DebugType>
 	<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
 	<Description>Pacote feito de programador para programador com as principais funções utilitárias utilizadas nos projetos da Green</Description>
-	<Copyright>Green Concept  © 2018</Copyright>
+	<Copyright>Green Concept © 2018</Copyright>
 	<AssemblyVersion>1.0.31.0</AssemblyVersion>
 	<FileVersion>1.0.31.0</FileVersion>
 	<Version>1.0.31</Version>
