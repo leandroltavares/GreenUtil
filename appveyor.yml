@@ -10,4 +10,12 @@ before_build:
   - cmd: dotnet --version
 # Display minimal restore text
   - cmd: dotnet restore ./GreenUtil.sln --verbosity m
-
+artifacts:
+  - path: '.\GreenUtil\bin\Release\netstandard2.0\GreenUtil.dll'
+    name: GreenUtil.dll
+  - path: '**\*.nupkg'
+deploy:
+  provider: NuGet
+  api_key:
+    secure: lKS7OIfKrf8/DWa+zPE7338BWZSkCn06LynccKNlqKzTHzDOaXfbCtS6OOV40Kz8
+  artifact: /.*\.nupkg/
