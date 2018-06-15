@@ -21,7 +21,7 @@
     <DocumentationFile>bin\Release\net471\GreenUtil.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-	<RuntimeIdentifiers>any</RuntimeIdentifiers>
+	<RuntimeIdentifiers>win</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
