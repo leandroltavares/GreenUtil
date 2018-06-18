@@ -27,6 +27,10 @@
 	<PackageLicenseUrl>https://github.com/leandroltavares/GreenUtil/blob/master/LICENSE</PackageLicenseUrl>
 	<RepositoryUrl>https://github.com/leandroltavares/GreenUtil</RepositoryUrl>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.10" />

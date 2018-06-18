@@ -13,7 +13,7 @@ before_build:
   - choco install opencover.portable
   - choco install codecov
 test_script:
-  - OpenCover.Console.exe -register:user -target:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\mstest.exe" -targetargs:"/testcontainer:C:\projects\greenutil\GreenUtil.Test\bin\Release\GreenUtil.dll" -output:".\coverage.xml" -filter:"+[GreenUtil*]*"
+  - OpenCover.Console.exe -register:user -target:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" -targetargs:"C:\projects\greenutil\GreenUtil.Test\bin\Release\GreenUtil.Test.dll" -output:".\coverage.xml" -log:Info -filter:"+[GreenUtil*]* -[GreenUtil.Test]* -[GreenUtil]*Designer.cs"
 after_test:
    - ps: |
       $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
