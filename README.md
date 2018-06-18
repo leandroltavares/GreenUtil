@@ -13,7 +13,7 @@ The utilities are divided into namespaces:
 - Crypto: Logic related to Hashing (MD5 and SHA1), Symmetric and Asymmetric cryptography;
 - Data: Logic related to data (XML, Json, Cache, Mail, etc...);
 - Enumeration: Logic related to ```Enums```;
-- Imaging: Logic related to ```images``` and ```bitmaps```, including high speed bits manipulation, ```Scale```, ```Crop```, FixOrientation (EXIF), get images ```MimeTypes``` and ```base64``` conversions  
+- Imaging: Logic related to ```images``` and ```bitmaps```, including high speed bits manipulation, ```Scale```, ```Crop```, ```FixOrientation``` (EXIF), get images ```MimeTypes``` and ```base64``` conversions  
 - IO: Logic related to files and directories, including Regex search, ```GetEncodingFromBOM```, detect file availability and others;
 - Linq: Logic related to ```Linq``` and ```Expression```, inclduing canonical ```True``` or ```False``` expressions and logical operators ```And``` and ```Or``` to compose complex operations;
 - Performance: Simple stopwatch to measure ```Actions``` execution time;
@@ -23,5 +23,13 @@ It also include logics for brazilian commom identifiers ([**CNPJ (portuguese)**]
 - Web: Logic related to Web. Methods for calling WebAPIs (GET and POST) and parsing the results;
 - Workflow: Logic for automata transition validations;
 
+##Installation
+
+GreenUtil is available as a NuGet package. You can install it using the NuGet Package Console window:
+
+```
+PM> Install-Package GreenUtil
+```
+
 ## Dependencies
-The library is designed to be depend as little as possible to other libraries. With that in mind, it depends only on [**Newtonsoft.Json**](https://www.nuget.org/packages/Newtonsoft.Json/) and [**Sytem.Drawing.Commom**](https://www.nuget.org/packages/System.Drawing.Common/)
+The library is designed to depend as little as possible to other libraries. With that in mind, it depends only on [**Newtonsoft.Json**](https://www.nuget.org/packages/Newtonsoft.Json/) and [**Sytem.Drawing.Commom**](https://www.nuget.org/packages/System.Drawing.Common/)
