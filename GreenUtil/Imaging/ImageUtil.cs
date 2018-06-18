@@ -221,7 +221,5 @@ namespace GreenUtil.Imaging
                 }
             }
         }
-
-        //TODO: https://stackoverflow.com/questions/24701703/c-sharp-faster-alternatives-to-setpixel-and-getpixel-for-bitmaps-for-windows-f
     }
 }

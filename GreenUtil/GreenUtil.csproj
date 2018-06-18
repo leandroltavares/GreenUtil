@@ -22,6 +22,10 @@
   </PropertyGroup>
   <PropertyGroup>
 	<RuntimeIdentifiers>win</RuntimeIdentifiers>
+	<PackageProjectUrl>https://github.com/leandroltavares/GreenUtil</PackageProjectUrl>
+	<PackageTags>green util helper string cpf cnpj boleto crypto cryptography data io file linq automata web</PackageTags>
+	<PackageLicenseUrl>https://github.com/leandroltavares/GreenUtil/blob/master/LICENSE</PackageLicenseUrl>
+	<RepositoryUrl>https://github.com/leandroltavares/GreenUtil</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
