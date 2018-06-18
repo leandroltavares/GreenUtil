@@ -126,15 +126,49 @@ namespace GreenUtil.IO
         }
     }
 
+    /// <summary>
+    /// Bytes Magnitude
+    /// </summary>
     public enum Magnitude : int
     {
+        /// <summary>
+        /// Kilobyte
+        /// </summary>
         KB = 1,
+
+        /// <summary>
+        /// Megabyte
+        /// </summary>
         MB = 2,
+
+        /// <summary>
+        /// Gigabyte
+        /// </summary>
         GB = 3,
+
+        /// <summary>
+        /// Terabyte
+        /// </summary>
         TB = 4,
+
+        /// <summary>
+        /// Petabyte
+        /// </summary>
         PB = 5,
+
+        /// <summary>
+        /// Exabyte
+        /// </summary>
         EB = 6,
+
+        /// <summary>
+        /// Zettabyte
+        /// </summary>
         ZB = 7,
+
+        /// <summary>
+        /// Yottabyte
+        /// </summary>
         YB = 8
     }
 }

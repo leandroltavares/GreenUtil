@@ -64,6 +64,13 @@ namespace GreenUtil.Imaging
             }
         }
 
+        /// <summary>
+        /// Save an image to disk
+        /// </summary>
+        /// <param name="source">The source image to be saved</param>
+        /// <param name="fileName">Destination path</param>
+        /// <param name="imageFormat">Image format</param>
+        /// <param name="quality">Image quality parameter</param>
         public static void Save(this Bitmap source, string fileName, ImageFormat imageFormat, double quality = 1.0)
         {
             if (source == null)
@@ -81,6 +88,11 @@ namespace GreenUtil.Imaging
             }
         }
 
+        /// <summary>
+        /// Get an image MimeType
+        /// </summary>
+        /// <param name="source">The source image</param>
+        /// <returns></returns>
         public static string MimeType(this Image source)
         {
             if (source == null)
@@ -105,6 +117,13 @@ namespace GreenUtil.Imaging
             return "image/bmp"; //https://en.wikipedia.org/wiki/BMP_file_format    
         }
 
+        /// <summary>
+        /// Scale an image to the desired size
+        /// </summary>
+        /// <param name="source">The source image</param>
+        /// <param name="targetWidth">The target image width</param>
+        /// <param name="targetHeight">The target image height</param>
+        /// <returns>The scaled image</returns>
         public static Bitmap Scale(this Bitmap source, int targetWidth, int targetHeight)
         {
             if (source == null)
@@ -120,6 +139,12 @@ namespace GreenUtil.Imaging
             return target;
         }
 
+        /// <summary>
+        /// Scale an image by the desired factor
+        /// </summary>
+        /// <param name="source">The source image</param>
+        /// <param name="factor">The scaling factor</param>
+        /// <returns>The scaled image</returns>
         public static Bitmap Scale(this Bitmap source, double factor)
         {
             if (source == null)

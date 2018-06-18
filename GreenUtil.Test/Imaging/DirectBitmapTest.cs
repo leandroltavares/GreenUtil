@@ -216,6 +216,8 @@ namespace GreenUtil.Test.Imaging
                 Debug.WriteLine("Standard Time:" + (time2 - time1).TotalMilliseconds);
                 Debug.WriteLine("Fast Time:" + (time3 - time2).TotalMilliseconds);
 
+                Console.WriteLine("Standard Time:" + (time2 - time1).TotalMilliseconds);
+                Console.WriteLine("Fast Time:" + (time3 - time2).TotalMilliseconds);
 
                 Assert.IsTrue(time2 - time1 > time3 - time2);
 

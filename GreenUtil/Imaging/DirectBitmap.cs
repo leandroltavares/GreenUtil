@@ -13,12 +13,34 @@ namespace GreenUtil.Imaging
     /// </remarks>
     public class DirectBitmap : IDisposable
     {
+        /// <summary>
+        /// Inner Bitmap
+        /// </summary>
         public Bitmap Bitmap { get; private set; }
+
+        /// <summary>
+        /// Color bits
+        /// </summary>
         public Int32[] Bits { get; private set; }
+
+        /// <summary>
+        /// Flag indicating if object was already disposed
+        /// </summary>
         public bool Disposed { get; private set; }
+
+        /// <summary>
+        /// Image height
+        /// </summary>
         public int Height { get; private set; }
+
+        /// <summary>
+        /// Image width
+        /// </summary>
         public int Width { get; private set; }
 
+        /// <summary>
+        /// Garbage collector handle
+        /// </summary>
         protected GCHandle BitsHandle { get; private set; }
 
         /// <summary>
