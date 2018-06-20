@@ -23,7 +23,7 @@ It also include logics for brazilian commom identifiers ([**CNPJ (portuguese)**]
 - Web: Logic related to Web. Methods for calling WebAPIs (GET and POST) and parsing the results;
 - Workflow: Logic for automata transition validations;
 
-##Installation
+## Installation
 
 GreenUtil is available as a NuGet package. You can install it using the NuGet Package Console window:
 
