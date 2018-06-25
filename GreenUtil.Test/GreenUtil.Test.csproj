@@ -45,6 +45,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\DictionaryUtilTest.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Crypto\MD5HashUtilTest.cs" />
     <Compile Include="Crypto\SymmetricCryptoUtilTest.cs" />
     <Compile Include="Data\CacheUtilTest.cs" />
+    <Compile Include="Data\DateTimeUtilTest.cs" />
     <Compile Include="Data\JsonUtilTest.cs" />
     <Compile Include="Data\MailUtilTest.cs" />
     <Compile Include="Data\ObjectUtilTest.cs" />

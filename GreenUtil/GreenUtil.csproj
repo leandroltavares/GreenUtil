@@ -6,12 +6,12 @@
 	<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
 	<Description>Library made from coders to coders with some utilities used in GreenConcept projects</Description>
 	<Copyright>Green Concept © 2018</Copyright>
-	<AssemblyVersion>1.0.32.0</AssemblyVersion>
-	<FileVersion>1.0.32.0</FileVersion>
-	<Version>1.0.32</Version>
+	<AssemblyVersion>1.0.33.0</AssemblyVersion>
+	<FileVersion>1.0.33.0</FileVersion>
+	<Version>1.0.33</Version>
 	<Company>Green Concept</Company>
 	<Authors>Leandro Luciani Tavares, Wellington Gama Gomes, Fernando Garcia Bellio, Marcos Denoni Buturri, Maurilio Nava Junior, Gustavo Motta Tranche</Authors>
-	<PackageReleaseNotes>Fixed package tags and links</PackageReleaseNotes>
+	<PackageReleaseNotes>Added IsSQLValidDateTime</PackageReleaseNotes>
 	<PackageIconUrl>https://raw.githubusercontent.com/leandroltavares/GreenUtil/master/icon.png</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net471|AnyCPU'">
@@ -23,7 +23,7 @@
   <PropertyGroup>
 	<RuntimeIdentifiers>win</RuntimeIdentifiers>
 	<PackageProjectUrl>https://github.com/leandroltavares/GreenUtil</PackageProjectUrl>
-	<PackageTags>green util helper string cpf cnpj boleto crypto cryptography data io file linq automata web</PackageTags>
+	<PackageTags>green util helper string cpf cnpj boleto crypto cryptography data io file linq automata web sql datetime</PackageTags>
 	<PackageLicenseUrl>https://github.com/leandroltavares/GreenUtil/blob/master/LICENSE</PackageLicenseUrl>
 	<RepositoryUrl>https://github.com/leandroltavares/GreenUtil</RepositoryUrl>
   </PropertyGroup>
