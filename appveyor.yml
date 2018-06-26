@@ -39,5 +39,5 @@ on_success:
   - git clone https://github.com/leandroltavares/GreenUtil.wiki.git
   - git add C:\projects\greenutil\Assets\md
   - git commit -m "Commiting wiki changes"
-  - git push
+  - git push origin HEAD:master
   
