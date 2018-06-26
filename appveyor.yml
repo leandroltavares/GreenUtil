@@ -35,8 +35,8 @@ on_success:
   - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - git config --global user.email "leandro.ltavares@gmail.com"
   - git config --global user.name "Leandro Luciani Tavares"
-  - git clone --branch=master https://github.com/leandroltavares/GreenUtil.wiki.git C:\projects\greenutil\Assets\md
-  - cmd: C:\projects\greenutil\Assets\MarkdownGenerator.exe C:\projects\greenutil\GreenUtil\bin\Release\net471\GreenUtil.dll C:\projects\greenutil\Assets\md
+  - git clone --branch=master https://github.com/leandroltavares/GreenUtil.wiki.git C:\projects\wiki
+  - cmd: C:\projects\greenutil\Assets\MarkdownGenerator.exe C:\projects\greenutil\GreenUtil\bin\Release\net471\GreenUtil.dll C:\projects\wiki
   - git add .
   - git commit -m "Commiting wiki changes"
   - git push origin HEAD:master
