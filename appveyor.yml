@@ -36,9 +36,12 @@ on_success:
   - git config --global user.email "leandro.ltavares@gmail.com"
   - git config --global user.name "Leandro Luciani Tavares"
   - git clone --branch=master https://github.com/leandroltavares/GreenUtil.wiki.git C:\projects\wiki
-  - cmd: C:\projects\greenutil\Assets\MarkdownGenerator.exe C:\projects\greenutil\GreenUtil\bin\Release\net471\GreenUtil.dll C:\projects\wiki
-  - git cd C:\projects\wiki
-  - git add .
+  - git status
+  - cmd: C:\projects\greenutil\Assets\MarkdownGenerator.exe C:\projects\greenutil\GreenUtil\bin\Release\net471\GreenUtil.dll "C:\projects\wiki"
+  - git status
+  - git add "C:\projects\wiki"
+  - git status
   - git commit -m "Commiting wiki changes"
+  - git status
   - git push origin HEAD:master
   
