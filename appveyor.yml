@@ -37,7 +37,7 @@ on_success:
   - git config --global user.name "Leandro Luciani Tavares"
   - ps: md C:\projects\wiki
   - ps: cd C:\projects\wiki
-  - git clone --branch=master https://github.com/leandroltavares/GreenUtil.wiki.git 
+  - ps: git clone --branch=master https://github.com/leandroltavares/GreenUtil.wiki.git 
   - git status
   - cmd: C:\projects\greenutil\Assets\MarkdownGenerator.exe C:\projects\greenutil\GreenUtil\bin\Release\net471\GreenUtil.dll "C:\projects\wiki"
   - git status
