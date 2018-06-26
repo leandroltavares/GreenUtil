@@ -186,8 +186,8 @@ namespace GreenUtil.Test.Imaging
         [TestMethod]
         public void WhenDirectedBitmapIsUsedThenPerformanceShouldBeBetterThanStandardSetPixel()
         {
-            int width = 1000;
-            int height = 2000;
+            int width = 100;
+            int height = 200;
 
             using (var instance = new DirectBitmap(width, height, PixelFormat.Format32bppArgb))
             {
