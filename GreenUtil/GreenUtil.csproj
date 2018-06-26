@@ -6,12 +6,12 @@
 	<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
 	<Description>Library made from coders to coders with some utilities used in GreenConcept projects</Description>
 	<Copyright>Green Concept © 2018</Copyright>
-	<AssemblyVersion>1.0.33.0</AssemblyVersion>
-	<FileVersion>1.0.33.0</FileVersion>
-	<Version>1.0.33</Version>
+	<AssemblyVersion>1.0.34.0</AssemblyVersion>
+	<FileVersion>1.0.34.0</FileVersion>
+	<Version>1.0.34</Version>
 	<Company>Green Concept</Company>
 	<Authors>Leandro Luciani Tavares, Wellington Gama Gomes, Fernando Garcia Bellio, Marcos Denoni Buturri, Maurilio Nava Junior, Gustavo Motta Tranche</Authors>
-	<PackageReleaseNotes>Added IsSQLValidDateTime</PackageReleaseNotes>
+	<PackageReleaseNotes>Fixed XML documentation for netstandard2.0</PackageReleaseNotes>
 	<PackageIconUrl>https://raw.githubusercontent.com/leandroltavares/GreenUtil/master/icon.png</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net471|AnyCPU'">
@@ -19,6 +19,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net471|AnyCPU'">
     <DocumentationFile>bin\Release\net471\GreenUtil.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\GreenUtil.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
 	<RuntimeIdentifiers>win</RuntimeIdentifiers>
