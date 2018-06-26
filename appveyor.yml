@@ -1,3 +1,5 @@
+environment:
+  access_token: V7hA4MtHW/PDJ1CkwzQYPFEihapq83bHxz7jiAVdHuDJSWuZkXe3VaTSPahdZ9eo
 image: Visual Studio 2017
 configuration: Release
 init:
@@ -28,3 +30,12 @@ deploy:
   api_key:
     secure: lKS7OIfKrf8/DWa+zPE7338BWZSkCn06LynccKNlqKzTHzDOaXfbCtS6OOV40Kz8
   artifact: /.*\.nupkg/
+on_success:
+  - cmd: C:\projects\greenutil\Assets\MarkdownGenerator.exe C:\projects\greenutil\GreenUtil\bin\Release\net471\GreenUtil.dll C:\projects\greenutil\Assets\md
+  - git config --global credential.helper store
+  - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git clone https://github.com/leandroltavares/GreenUtil.wiki.git
+  - git add C:\projects\greenutil\Assets\md
+  - git commit -m "Commiting wiki changes"
+  - git push origin master
+  
