@@ -20,6 +20,7 @@ namespace GreenUtil.Test.String
         {
             Assert.ThrowsException<ArgumentNullException>(() => MaskUtil.ToMaskedString(null, "#"));
         }
+
         [TestMethod]
         public void WhenSourceStringIsNullThenToMaskedStringShouldThrowArgumentException()
         {
@@ -32,6 +33,11 @@ namespace GreenUtil.Test.String
             Assert.ThrowsException<ArgumentException>(() => MaskUtil.ToMaskedString("00000", "#"));
         }
 
+        [TestMethod]
+        public void WhenFormatMaskStringThenToMaskedStringShouldThrowArgumentNullException()
+        {
+            Assert.ThrowsException<ArgumentNullException>(() => MaskUtil.ToMaskedString("00000", null));
+        }
 
 
         [DataTestMethod]
