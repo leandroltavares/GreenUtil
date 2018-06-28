@@ -85,10 +85,13 @@
     <Compile Include="String\CPFUtilTest.cs" />
     <Compile Include="String\DateUtilTest.cs" />
     <Compile Include="String\IsDigitTest.cs" />
+    <Compile Include="String\MaskUtilTest.cs" />
     <Compile Include="String\RGUtilTest.cs" />
     <Compile Include="String\StringUtilTest\Base64Test.cs" />
     <Compile Include="String\StringUtilTest\HexTest.cs" />
+    <Compile Include="String\StringUtilTest\KeepCharsTest.cs" />
     <Compile Include="String\StringUtilTest\LevenshteinTest.cs" />
+    <Compile Include="String\StringUtilTest\RemoveCharsTest.cs" />
     <Compile Include="String\StringUtilTest\RemoveDiacriticsTest.cs" />
     <Compile Include="String\StringUtilTest\SliceTest.cs" />
     <Compile Include="String\StringUtilTest\SplitPagesTest.cs" />

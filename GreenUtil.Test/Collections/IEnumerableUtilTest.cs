@@ -178,5 +178,90 @@ namespace GreenUtil.Test.Collections
             Assert.AreNotSame(source, shuffled);
             CollectionAssert.AreNotEqual(source, shuffled);
         }
+
+        [TestMethod]
+        public void WhenCollectionIsNullThenToStringShouldThrowArgumentNullException()
+        {
+            Assert.ThrowsException<ArgumentNullException>(() => IEnumerableUtil.ToString<int>(null).ToList());
+        }
+
+        [TestMethod]
+        public void WhenArrayOfIntegersIsNotNullThenToStringShouldReturnString()
+        {
+            //Arrange
+            var source = new int[] { 10, 42, 92, 04, 06, 49, 55, 21, 61, 59 };
+
+            //Act
+            string printString = source.ToString<int>();
+
+            //Arrange
+            Assert.AreEqual("10,42,92,4,6,49,55,21,61,59", printString);
+        }
+
+        [TestMethod]
+        public void WhenListOfStringIsNotNullThenToStringShouldReturnString()
+        {
+            //Arrange
+            var source = new List<string> { "10", "42", "92", "04", "06", "49", "55", "21", "61", "59" };
+
+            //Act
+            string printString = source.ToString<string>();
+
+            //Arrange
+            Assert.AreEqual("10,42,92,04,06,49,55,21,61,59", printString);
+        }
+
+        [TestMethod]
+        public void WhenListOfStringIsNotNullAndSeparatorIsPipeThenToStringShouldReturnString()
+        {
+            //Arrange
+            var source = new List<string> { "10", "42", "92", "04", "06", "49", "55", "21", "61", "59" };
+
+            //Act
+            string printString = source.ToString("|");
+
+            //Arrange
+            Assert.AreEqual("10|42|92|04|06|49|55|21|61|59", printString);
+        }
+
+
+        [TestMethod]
+        public void WhenListOfStringIsNotNullAndSeparatorIsNullThenToStringShouldReturnString()
+        {
+            //Arrange
+            var source = new List<string> { "10", "42", "92", "04", "06", "49", "55", "21", "61", "59" };
+
+            //Act
+            string printString = source.ToString(null);
+
+            //Arrange
+            Assert.AreEqual("10429204064955216159", printString);
+        }
+
+        [TestMethod]
+        public void WhenListOfStringIsNotNullAndSeparatorIsNullAndSurroundingsAreBracketsThenToStringShouldReturnString()
+        {
+            //Arrange
+            var source = new List<string> { "10", "42", "92", "04", "06", "49", "55", "21", "61", "59" };
+
+            //Act
+            string printString = source.ToString<string>(",", "[", "]");
+
+            //Arrange
+            Assert.AreEqual("[10],[42],[92],[04],[06],[49],[55],[21],[61],[59]", printString);
+        }
+
+        [TestMethod]
+        public void WhenListOfStringIsNotNullAndSeparatorIsNullAndSurroundingsAreNullThenToStringShouldReturnString()
+        {
+            //Arrange
+            var source = new List<string> { "10", "42", "92", "04", "06", "49", "55", "21", "61", "59" };
+
+            //Act
+            string printString = source.ToString<string>(",", null, null);
+
+            //Arrange
+            Assert.AreEqual("10,42,92,04,06,49,55,21,61,59", printString);
+        }
     }
 }

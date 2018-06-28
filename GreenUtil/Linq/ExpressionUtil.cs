@@ -5,30 +5,30 @@ using System.Linq.Expressions;
 namespace GreenUtil.Linq
 {
     /// <summary>
-    /// Classe para lógicas relacionadas a <see cref="Expression"/>
+    /// Logic related to <see cref="Expression"/>
     /// </summary>
     public static class ExpressionUtil
     {
         /// <summary>
-        /// Boilerplate para iniciar um predicado como verdadeiro
+        /// Boilerplate for initializing a predicate as True
         /// </summary>
-        /// <typeparam name="T">Tipo da Expressão do predicado</typeparam>
-        /// <returns>Expressão que retorna sempre verdadeiro</returns>
+        /// <typeparam name="T">Predicate expression type</typeparam>
+        /// <returns>Expression that will always return true</returns>
         public static Expression<Func<T, bool>> True<T>() { return f => true; }
 
         /// <summary>
-        /// Boilerplate para iniciar um predicado como falso
+        /// Boilerplate for initializing a predicate as False
         /// </summary>
-        /// <typeparam name="T">Tipo da Expressão do predicado</typeparam>
-        /// <returns>Expressão que retorna sempre falso</returns>
+        /// <typeparam name="T">Predicate expression type</typeparam>
+        /// <returns>Expression that will always return false</returns>
         public static Expression<Func<T, bool>> False<T>() { return f => false; }
 
         /// <summary>
-        /// Método para compor uma expressão utilizando o operador binário Or
+        /// Compose an expression with OR binary operator
         /// </summary>
-        /// <typeparam name="T">Tipo da Expressão do predicado</typeparam>
-        /// <param name="expr1">Expressão do Tipo <see cref="T"/> a esquerda da condição Or</param>
-        /// <param name="expr2">Expressão do Tipo <see cref="T"/> a direita da condição Or</param>
+        /// <typeparam name="T">Predicate expression type</typeparam>
+        /// <param name="expr1">Left side expression</param>
+        /// <param name="expr2">Right side expression</param>
         /// <returns>Expressão combinada com a condição Or</returns>
         public static Expression<Func<T, bool>> Or<T>(this Expression<Func<T, bool>> expr1,
                                                             Expression<Func<T, bool>> expr2)
@@ -45,11 +45,11 @@ namespace GreenUtil.Linq
         }
 
         /// <summary>
-        /// Método para compor uma expressão utilizando o operador binário And
+        /// Compose an expression with AND binary operator
         /// </summary>
-        /// <typeparam name="T">Tipo da Expressão do predicado</typeparam>
-        /// <param name="expr1">Expressão do Tipo <see cref="T"/> a esquerda da condição And</param>
-        /// <param name="expr2">Expressão do Tipo <see cref="T"/> a direita da condição And</param>
+        /// <typeparam name="T">Predicate expression type</typeparam>
+        /// <param name="expr1">Left side expression</param>
+        /// <param name="expr2">Right side expression</param>
         public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> expr1,
                                                              Expression<Func<T, bool>> expr2)
         {

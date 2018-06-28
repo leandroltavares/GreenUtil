@@ -6,28 +6,28 @@ using System.Text.RegularExpressions;
 namespace GreenUtil.String
 {   
     /// <summary>
-    /// Classe para lógicas relacionadas a Boleto
+    /// Boleto (brazilian  payment method) related logic
     /// </summary>
     public static class BoletoUtil
     {
         /// <summary>
-        /// Método para validar a máscara Boleto
+        /// Validate a boleto mask
         /// </summary>
-        /// <param name="boleto"></param>
-        /// <returns></returns>
-        public static bool ValidateMask(this string linhaDigitalvel)
+        /// <param name="boleto">The boleto identification</param>
+        /// <returns>True if the input is valid, false otherwise</returns>
+        public static bool ValidateMask(this string boleto)
         {
-            if (linhaDigitalvel == null)
-                throw new ArgumentNullException(nameof(linhaDigitalvel));
+            if (boleto == null)
+                throw new ArgumentNullException(nameof(boleto));
 
-            return Regex.IsMatch(linhaDigitalvel, @"\d{5}\.\d{5} \d{5}\.\d{6} \d{5}\.\d{6} \d \d{14}");
+            return Regex.IsMatch(boleto, @"\d{5}\.\d{5} \d{5}\.\d{6} \d{5}\.\d{6} \d \d{14}");
         }
 
         /// <summary>
-        /// Método para validar a linha digitável de um Boleto
+        /// Validate the user specified line (LINHA DIGITÁVEL) from a boleto
         /// </summary>
-        /// <param name="linhaDigitavel">Boleto a ser validado</param>
-        /// <returns>Verdadeiro se o Boleto é valido, falso caso contrário</returns>
+        /// <param name="linhaDigitavel">The user specified line (LINHA DIGITÁVEL) a ser validado</param>
+        /// <returns>True if the input is valid, false otherwise</returns>
         public static bool ValidateBoleto(this string linhaDigitavel)
         {
             if (linhaDigitavel == null)
@@ -72,10 +72,10 @@ namespace GreenUtil.String
         }
 
         /// <summary>
-        /// Gera o texto do código de barras a partir da linha digitável
+        /// Generate the barcode text from the user specified input (LINHA DIGITÁVEL)
         /// </summary>
-        /// <param name="linhaDigitavel"></param>
-        /// <returns></returns>
+        /// <param name="linhaDigitavel">The user specified input (LINHA DIGITÁVEL)</param>
+        /// <returns>The barcode text</returns>
         public static string GenerateBarCodeText(string linhaDigitavel)
         {
             if (linhaDigitavel == null)

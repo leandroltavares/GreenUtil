@@ -95,5 +95,30 @@ namespace GreenUtil.Collections
                 buffer[j] = buffer[i];
             }
         }
+
+        /// <summary>
+        /// Convert a collection into a string, where each element is separated with a comma, by default.
+        /// </summary>
+        /// <param name="source">Collection to be printed</param>
+        /// <param name="separator">Element separator</param>
+        /// <returns>Returns a new string containing all the elements in the collection.</returns>
+        public static string ToString<T>(this IEnumerable<T> source, string separator = ",", string prefix = "", string suffix = "")
+        {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
+            if (separator == null)
+                separator = string.Empty;
+
+            if (prefix == null)
+                prefix = string.Empty;
+
+            if (suffix == null)
+                suffix = string.Empty;
+
+            string x = source.Aggregate(string.Empty, (acc, cur) => acc + prefix + cur.ToString() + suffix + separator);
+
+            return x.Substring(0, x.Length - separator.Length);
+        }
     }
 }

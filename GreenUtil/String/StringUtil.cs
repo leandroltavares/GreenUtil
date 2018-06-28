@@ -350,5 +350,40 @@ namespace GreenUtil.String
 
             return Regex.Replace(source, @"\s+", " ");
         }
+
+        /// <summary>
+        /// Remove all instances of the informed characters
+        /// </summary>
+        /// <param name="source">The string to have some characters removed</param>
+        /// <param name="charactersToBeRemoved">Array of characters to be removed</param>
+        /// <returns>The sanitized string</returns>
+        public static string RemoveChars(this string source, char[] charactersToBeRemoved)
+        {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
+            if(charactersToBeRemoved == null)
+                throw new ArgumentNullException(nameof(charactersToBeRemoved));
+
+            return new string(source.Where(c => !charactersToBeRemoved.Contains(c)).ToArray());
+        }
+
+        /// <summary>
+        /// Keep only
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="charactersToBeKept"></param>
+        /// <returns></returns>
+        public static string KeepChars(this string source, char[] charactersToBeKept)
+        {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
+            if (charactersToBeKept == null)
+                throw new ArgumentNullException(nameof(charactersToBeKept));
+
+            return new string(source.Where(c => charactersToBeKept.Contains(c)).ToArray());
+
+        }
     }
 }
