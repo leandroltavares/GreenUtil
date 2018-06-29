@@ -1,5 +1,6 @@
 environment:
-  access_token: V7hA4MtHW/PDJ1CkwzQYPFEihapq83bHxz7jiAVdHuDJSWuZkXe3VaTSPahdZ9eo
+  access_token:
+    secure: V7hA4MtHW/PDJ1CkwzQYPFEihapq83bHxz7jiAVdHuDJSWuZkXe3VaTSPahdZ9eo
 image: Visual Studio 2017
 configuration: Release
 init:
