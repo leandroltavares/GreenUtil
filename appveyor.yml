@@ -47,4 +47,3 @@ on_success:
   - git commit -m "Commiting wiki changes"
   - git status
   - git push
-  
