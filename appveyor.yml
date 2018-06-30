@@ -51,3 +51,4 @@ on_success:
     git status
     git push
     git status
+    
