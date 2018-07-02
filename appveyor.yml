@@ -33,4 +33,4 @@ deploy:
     secure: lKS7OIfKrf8/DWa+zPE7338BWZSkCn06LynccKNlqKzTHzDOaXfbCtS6OOV40Kz8
   artifact: /.*\.nupkg/
 on_success:
-  - ps: .\"C:\projects\greenutil\Assets\wiki.ps1" -token $env:access_token
+  - ps: Invoke-Expression -Command "C:\projects\greenutil\Assets\wiki.ps1 -token $env:access_token"
