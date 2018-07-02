@@ -4,7 +4,7 @@ environment:
 image: Visual Studio 2017
 configuration: Release
 init:
-  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+  #- ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 # Good practise, because Windows line endings are different from Unix/Linux ones
   - cmd: git config --global core.autocrlf true
 install:
