@@ -1,10 +1,11 @@
-param([string]$token)
+Param([string]$token)
 
 Write-Host "Start publishing documentation to wiki"
 git config --global credential.helper store
 Add-Content "$HOME\.git-credentials" "https://$($token):x-oauth-basic@github.com`n"
 git config --global user.email "leandro.ltavares@gmail.com"
 git config --global user.name "Leandro Luciani Tavares"
+Remove-Item C:\projects\wiki2 -Force -Recurse -ErrorAction SilentlyContinue
 md C:\projects\wiki2
 cd C:\projects\wiki2
 git clone --branch=master https://github.com/leandroltavares/GreenUtil.wiki.git 
