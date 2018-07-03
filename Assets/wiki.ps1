@@ -4,7 +4,7 @@ $mdFolder = "C:\projects\wiki2"
 
 Write-Host "Start publishing documentation to wiki"
 git config --global credential.helper store
-Add-Content "$HOME\.git-credentials" "https://$($token):x-oauth-basic@github.com"
+Add-Content "$HOME\.git-credentials" "https://$($token):x-oauth-basic@github.com`n"
 git config --global user.email "leandro.ltavares@gmail.com"
 git config --global user.name "Leandro Luciani Tavares"
 Remove-Item $mdFolder -Force -Recurse -ErrorAction SilentlyContinue
