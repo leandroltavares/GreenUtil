@@ -13,7 +13,7 @@ cd $mdFolder
 #git clone --branch=master "https://github.com/leandroltavares/GreenUtil.wiki.git" -q
 #cd GreenUtil.wiki
 git clone --branch=master "https://github.com/leandroltavares/netdeveloperpraticum.wiki.git" -q
-cd netdeveloperpraticum
+cd netdeveloperpraticum.wiki
 git status
 #C:\projects\greenutil\Assets\MarkdownGenerator.exe "C:\projects\greenutil\GreenUtil\bin\Release\net471\GreenUtil.dll" "$($mdFolder)\GreenUtil.wiki"
 #git status
