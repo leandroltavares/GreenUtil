@@ -11,7 +11,7 @@ Remove-Item $mdFolder -Force -Recurse -ErrorAction SilentlyContinue
 md $mdFolder
 cd $mdFolder
 #git clone --branch=master "https://github.com/leandroltavares/GreenUtil.wiki.git" -q
-cd GreenUtil.wiki
+#cd GreenUtil.wiki
 git clone --branch=master "https://github.com/leandroltavares/netdeveloperpraticum.wiki.git" -q
 cd netdeveloperpraticum
 git status
