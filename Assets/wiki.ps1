@@ -11,14 +11,16 @@ Remove-Item $mdFolder -Force -Recurse -ErrorAction SilentlyContinue
 md $mdFolder
 cd $mdFolder
 git clone --branch=master "https://github.com/leandroltavares/GreenUtil.wiki.git" -q
+#git clone --branch=master "https://github.com/leandroltavares/netdeveloperpraticum.wiki.git" -q
 cd GreenUtil.wiki
 git status
-C:\projects\greenutil\Assets\MarkdownGenerator.exe "C:\projects\greenutil\GreenUtil\bin\Release\net471\GreenUtil.dll" "$($mdFolder)\GreenUtil.wiki"
-git status
+#C:\projects\greenutil\Assets\MarkdownGenerator.exe "C:\projects\greenutil\GreenUtil\bin\Release\net471\GreenUtil.dll" "$($mdFolder)\GreenUtil.wiki"
+#git status
+Add-content "Home.md" "test content"
 git add .
 git status
 git commit -m "Commiting wiki changes"
 git status
 git push -q
 git status
-Write-Host "Start publishing documentation to wiki"
+Write-Host "Finish publishing documentation to wiki"
