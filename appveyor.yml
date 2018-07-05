@@ -33,6 +33,6 @@ deploy:
     secure: lKS7OIfKrf8/DWa+zPE7338BWZSkCn06LynccKNlqKzTHzDOaXfbCtS6OOV40Kz8
   artifact: /.*\.nupkg/
 on_success:
-  - ps: Start-Sleep -s 3600
+  #- ps: Start-Sleep -s 3600
   - ps: Write-Host "Waiting"
   - ps: Invoke-Expression -Command "C:\projects\greenutil\Assets\wiki.ps1 -token $($env:access_token)"
