@@ -25,6 +25,6 @@ git add .
 git status
 git commit -m "Commiting wiki changes"
 git status
-git push #-q
+C:\Program Files\Git\bin\git.exe push #-q
 git status
 Write-Host "Finish publishing documentation to wiki"
