@@ -5,16 +5,16 @@ using System.Text;
 namespace GreenUtil.Crypto
 {
     /// <summary>
-    /// Classe para lógicas relacionada a criptografia assimétrica
+    /// Asymmetric Cryptographic utilities
     /// </summary>
     public class AsymmetricCryptoUtil
     {
         /// <summary>
-        /// Gera um par de chaves dado o tamanho da chave, retornando as chave como XML
+        /// Generate a keypair given a key size returning them as XML
         /// </summary>
-        /// <param name="keySize">Tamanho da chave</param>
-        /// <param name="publicKey">Chave pública</param>
-        /// <param name="publicAndPrivateKey">Chave privada</param>
+        /// <param name="keySize">Key size</param>
+        /// <param name="publicKey">Public key</param>
+        /// <param name="publicAndPrivateKey">Private key</param>
         public static void GenerateKeys(int keySize, out string publicKey, out string publicAndPrivateKey)
         {
             if (!IsKeySizeValid(keySize))
@@ -29,11 +29,11 @@ namespace GreenUtil.Crypto
 
 
         /// <summary>
-        /// Gera um par de chaves dado o tamanho da chave, retornando as chave como os <see cref="RSAParameters"/>
+        /// Generate a keypair given a key size returning them as <see cref="RSAParameters"/>
         /// </summary>
-        /// <param name="keySize">Tamanho da chave</param>
-        /// <param name="publicKey">Chave pública</param>
-        /// <param name="publicAndPrivateKey">Chave privada</param>
+        /// <param name="keySize">Key size</param>
+        /// <param name="publicKey">Public key</param>
+        /// <param name="publicAndPrivateKey">Private key</param>
         public static void GenerateKeys(int keySize, out RSAParameters publicKey, out RSAParameters publicAndPrivateKey)
         {
             if (!IsKeySizeValid(keySize))
@@ -47,12 +47,12 @@ namespace GreenUtil.Crypto
         }
 
         /// <summary>
-        /// Método pra criptografar um texto
+        /// Encrypts a string
         /// </summary>
-        /// <param name="text"><see cref="string"/> a ser criptografada</param>
-        /// <param name="keySize">Tamanho da chave</param>
-        /// <param name="publicKeyXml">Chave publica</param>
-        /// <returns>Texto encriptado</returns>
+        /// <param name="text"><see cref="string"/> to be encrypted</param>
+        /// <param name="keySize">Key size</param>
+        /// <param name="publicKeyXml">Public key</param>
+        /// <returns>Encrypted string</returns>
         public static string EncryptText(string text, int keySize, string publicKeyXml)
         {
             var encrypted = Encrypt(Encoding.UTF8.GetBytes(text), keySize, publicKeyXml);
@@ -60,12 +60,12 @@ namespace GreenUtil.Crypto
         }
 
         /// <summary>
-        /// Método pra criptografar um texto
+        /// Encrypts a string
         /// </summary>
-        /// <param name="text"><see cref="string"/> a ser criptografada</param>
-        /// <param name="keySize">Tamanho da chave</param>
-        /// <param name="publicKey">Chave pública</param>
-        /// <returns>Texto encriptado</returns>
+        /// <param name="text"><see cref="string"/> to be encrypted</param>
+        /// <param name="keySize">Key size</param>
+        /// <param name="publicKey">Public key</param>
+        /// <returns>Encrypted string</returns>
         public static string EncryptText(string text, int keySize, RSAParameters publicKey)
         {
             var encrypted = Encrypt(Encoding.UTF8.GetBytes(text), keySize, publicKey);

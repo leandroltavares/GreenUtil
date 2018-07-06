@@ -101,6 +101,8 @@ namespace GreenUtil.Collections
         /// </summary>
         /// <param name="source">Collection to be printed</param>
         /// <param name="separator">Element separator</param>
+        /// <param name="prefix">The prefix to be added to the output string</param>
+        /// <param name="suffix">The suffix to be added to the output string</param>
         /// <returns>Returns a new string containing all the elements in the collection.</returns>
         public static string ToString<T>(this IEnumerable<T> source, string separator = ",", string prefix = "", string suffix = "")
         {
