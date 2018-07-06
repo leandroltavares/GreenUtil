@@ -11,7 +11,7 @@ Remove-Item $mdFolder -Force -Recurse -ErrorAction SilentlyContinue
 md $mdFolder
 cd $mdFolder
 git --version
-choco install -y git
+choco install -y --limitoutput git
 git --version
 git clone --branch=master "https://github.com/leandroltavares/GreenUtil.wiki.git" -q
 cd GreenUtil.wiki
@@ -25,6 +25,6 @@ git add .
 git status
 git commit -m "Commiting wiki changes"
 git status
-C:\Program Files\Git\bin\git.exe push #-q
+&"C:\Program Files\Git\bin\git.exe" push #-q
 git status
 Write-Host "Finish publishing documentation to wiki"
