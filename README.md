@@ -13,12 +13,12 @@ The utilities are divided into namespaces:
 - Crypto: Logic related to Hashing (MD5 and SHA1), Symmetric and Asymmetric cryptography;
 - Data: Logic related to data (XML, Json, Cache, Mail, etc...);
 - Enumeration: Logic related to ```Enums```;
-- Imaging: Logic related to ```images``` and ```bitmaps```, including high speed bits manipulation, ```Scale```, ```Crop```, ```FixOrientation``` (EXIF), get images ```MimeTypes``` and ```base64``` conversions  
+- Imaging: Logic related to ```images``` and ```bitmaps```, including high-speed bits manipulation, ```Scale```, ```Crop```, ```FixOrientation``` (EXIF), get images ```MimeTypes``` and ```base64``` conversions  
 - IO: Logic related to files and directories, including Regex search, ```GetEncodingFromBOM```, detect file availability and others;
-- Linq: Logic related to ```Linq``` and ```Expression```, inclduing canonical ```True``` or ```False``` expressions and logical operators ```And``` and ```Or``` to compose complex operations;
+- Linq: Logic related to ```Linq``` and ```Expression```, including canonical ```True``` or ```False``` expressions and logical operators ```And``` and ```Or``` to compose complex operations;
 - Performance: Simple stopwatch to measure ```Actions``` execution time;
 - String: Logic related to ```String``` processing including logic for removing numbers, diacritics, alphanumeric, conversion from and to ```base64``` and ```hex```;
-It also include logics for brazilian commom identifiers ([**CNPJ (portuguese)**](https://pt.wikipedia.org/wiki/Cadastro_Nacional_da_Pessoa_Jur%C3%ADdica), [**CPF (portuguese)**](https://pt.wikipedia.org/wiki/Cadastro_de_pessoas_f%C3%ADsicas), 
+It also includes logics for brazilian common identifiers ([**CNPJ (portuguese)**](https://pt.wikipedia.org/wiki/Cadastro_Nacional_da_Pessoa_Jur%C3%ADdica), [**CPF (portuguese)**](https://pt.wikipedia.org/wiki/Cadastro_de_pessoas_f%C3%ADsicas), 
 [**RG (portuguese)**](https://pt.wikipedia.org/wiki/C%C3%A9dula_de_identidade) and [**Boleto (portuguese)**](https://pt.wikipedia.org/wiki/Boleto_banc%C3%A1rio));
 - Web: Logic related to Web. Methods for calling WebAPIs (GET and POST) and parsing the results;
 - Workflow: Logic for automata transition validations;
