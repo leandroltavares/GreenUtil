@@ -34,5 +34,5 @@ deploy:
   artifact: /.*\.nupkg/
 on_success:
   #- ps: Start-Sleep -s 3600
-  - ps: Write-Host "Waiting"
-  - ps: Invoke-Expression -Command "C:\projects\greenutil\Assets\wiki.ps1 -token $($env:access_token)"
+#   - ps: Write-Host "Waiting"
+#   - ps: Invoke-Expression -Command "C:\projects\greenutil\Assets\wiki.ps1 -token $($env:access_token)"
